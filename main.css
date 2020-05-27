@@ -1,0 +1,137 @@
+
+/*to not include padding in box sizing*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: burlywood;
+}
+
+.container-task {
+    width: 600px;
+    margin: 30px auto;
+    background-color: gray;
+}
+
+.container-task .new-task{
+    position: relative;
+    padding: 15px;
+    background-color: rgba(0, 174, 255, 0.514);
+}
+
+.container-task .new-task input{
+    display: inline-block;                 /*to add width and height to inline element*/
+    padding: 10px;
+    border: none;
+    width: calc(100% - 15px);
+    background-color: rgba(255, 255, 255, .5);
+    color: white;
+    font-weight: bold;
+    font-size: 30;
+}
+
+.container-task .new-task .plus-task{
+    position: absolute;
+    width: 43px;
+    height: 38px;
+    right: 12px;
+    font-size: 30;
+    font-weight: bold;
+    color: white;
+    background-color: teal;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 38px;
+    cursor: pointer;
+}
+
+.container-task .task-content{
+    padding: 15px;
+}
+
+.container-task .task-content .no-task-msg{
+    font-size: 20px;
+    color: gray;
+}
+
+.container-task .task-content > span{
+    display: block;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.container-task .task-content > span:not(:last-child){
+    margin-bottom: 10px;
+}
+
+
+.container-task .task-content .task-box{
+   position: relative;
+}
+
+.container-task .task-content .task-box .delete{
+    
+    background-color: rgb(243, 75, 229);
+    position: absolute;
+    right: 10px;
+    bottom: 2px;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.container-task .task-content .task-box.finished {
+    text-decoration: line-through;
+}
+
+
+.task-stats {
+    margin: 10px auto;
+    width: 600px;
+    font-size: 20px;
+}
+
+
+.task-stats .task-count{
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+
+
+.task-stats .task-completed{
+    float: right;
+    width: 50%;
+    padding: 10px;
+    text-align: right;
+}
+
+.task-stats .task-count span, .task-stats .task-completed span{
+    color: white;
+    font-size: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+
+.task-stats .task-count span {
+    background-color: red;
+}
+
+.task-stats .task-completed span {
+    background-color: blue;
+}
+
+
+
+
+
+
