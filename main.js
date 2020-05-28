@@ -46,6 +46,15 @@ add_btn.onclick = function() {
 }
 
 
+var input = document.getElementById("add-task-ip");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("add-task-span").click();
+  }
+});
+
+
 
 
 document.addEventListener("click", function(e) {
